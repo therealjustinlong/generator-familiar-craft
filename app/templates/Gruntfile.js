@@ -105,10 +105,16 @@
         tasks: ['less:development']
 
       }
+    },
+    shell: {
+        makeDb: {
+            command: 'mysql -u root -proot -e "create database <%= databaseName %>"'
+        }
     }
 
   });
 
+  grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-curl');
   grunt.loadNpmTasks('grunt-zip');
   grunt.loadNpmTasks('grunt-contrib-copy');
@@ -120,7 +126,7 @@
   grunt.loadNpmTasks('grunt-notify');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.task.registerTask('craft', ['curl:craft', 'unzip:craft', 'copy:craft', 'clean:craft']);
-  grunt.task.registerTask('craft-install', ['craft', 'open:install']);
+  grunt.task.registerTask('craft-install', ['craft','shell:makeDb','less:development', 'open:install']);
 
   grunt.task.registerTask('db-pull', ['db_pull']);
 
