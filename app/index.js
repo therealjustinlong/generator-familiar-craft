@@ -39,7 +39,9 @@ module.exports = yeoman.generators.Base.extend({
     ];
 
     this.prompt(prompts, function (props) {
-      this.someOption = props.someOption;
+      this.databaseName = props.databaseName;
+      this.siteUrl = props.siteUrl;
+      this.name = props.name;
 
       done();
     }.bind(this));
@@ -48,12 +50,12 @@ module.exports = yeoman.generators.Base.extend({
   writing: {
     settings: function () {
 
-      this.src.copy('_package.json', 'package.json');
-      this.src.copy('_bower.json', 'bower.json');
-      this.src.copy('.bowerrc', '.bowerrc');
-      this.src.copy('editorconfig', '.editorconfig');
-      this.src.copy('jshintrc', '.jshintrc');
-      this.src.copy('Gruntfile.js', 'Gruntfile.js');
+      this.template('_package.json', 'package.json');
+      this.template('_bower.json', 'bower.json');
+      this.template('.bowerrc', '.bowerrc');
+      this.template('editorconfig', '.editorconfig');
+      this.template('jshintrc', '.jshintrc');
+      this.template('Gruntfile.js', 'Gruntfile.js');
 
     },
 
@@ -61,20 +63,20 @@ module.exports = yeoman.generators.Base.extend({
       this.dest.mkdir('craft');
 
       this.dest.mkdir('craft/config');
-      this.src.copy('config/db.php', 'craft/config/db.php');
-      this.src.copy('config/general.php', 'craft/config/general.php');
-      this.src.copy('config/routes.php', 'craft/config/routes.php');
+      this.template('config/db.php', 'craft/config/db.php');
+      this.template('config/general.php', 'craft/config/general.php');
+      this.template('config/routes.php', 'craft/config/routes.php');
 
       this.dest.mkdir('craft/config/redactor');
-      this.src.copy('config/redactor/Standard.json', 'craft/config/redactor/Standard.json');
-      this.src.copy('config/redactor/Simple.json', 'craft/config/redactor/Simple.json');
+      this.template('config/redactor/Standard.json', 'craft/config/redactor/Standard.json');
+      this.template('config/redactor/Simple.json', 'craft/config/redactor/Simple.json');
 
       this.dest.mkdir('craft/plugins');
       this.dest.mkdir('craft/storage');
 
       this.dest.mkdir('craft/templates');
-      this.src.copy('templates/_layout.html', 'craft/templates/_layout.html');
-      this.src.copy('templates/index.html', 'craft/templates/index.html');
+      this.template('templates/_layout.html', 'craft/templates/_layout.html');
+      this.template('templates/index.html', 'craft/templates/index.html');
 
     },
 
