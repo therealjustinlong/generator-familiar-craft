@@ -53,6 +53,7 @@ module.exports = yeoman.generators.Base.extend({
       this.template('_package.json', 'package.json');
       this.template('_bower.json', 'bower.json');
       this.template('.bowerrc', '.bowerrc');
+      this.template('.gitignore', '.gitignore');
       this.template('editorconfig', '.editorconfig');
       this.template('jshintrc', '.jshintrc');
       this.template('Gruntfile.js', 'Gruntfile.js');
@@ -61,7 +62,6 @@ module.exports = yeoman.generators.Base.extend({
 
     craftConfig: function () {
       this.dest.mkdir('craft');
-
       this.dest.mkdir('craft/config');
       this.template('config/db.php', 'craft/config/db.php');
       this.template('config/general.php', 'craft/config/general.php');
@@ -92,6 +92,7 @@ module.exports = yeoman.generators.Base.extend({
 
     }
   },
+
 
   end: function () {
     this.installDependencies({
