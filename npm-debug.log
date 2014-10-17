@@ -1,10 +1,10 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish', './' ]
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.32
-4 verbose publish [ './' ]
-5 verbose cache add [ './', null ]
-6 verbose cache add name=undefined spec="./" args=["./",null]
+4 verbose publish [ '.' ]
+5 verbose cache add [ '.', null ]
+6 verbose cache add name=undefined spec="." args=[".",null]
 7 verbose parsed url { protocol: null,
 7 verbose parsed url   slashes: null,
 7 verbose parsed url   auth: null,
@@ -14,30 +14,30 @@
 7 verbose parsed url   hash: null,
 7 verbose parsed url   search: null,
 7 verbose parsed url   query: null,
-7 verbose parsed url   pathname: './',
-7 verbose parsed url   path: './',
-7 verbose parsed url   href: './' }
-8 silly lockFile 0ee6c175- ./
-9 verbose lock ./ /Users/keithmancuso/.npm/0ee6c175-.lock
+7 verbose parsed url   pathname: '.',
+7 verbose parsed url   path: '.',
+7 verbose parsed url   href: '.' }
+8 silly lockFile 3a52ce78- .
+9 verbose lock . /Users/keithmancuso/.npm/3a52ce78-.lock
 10 verbose tar pack [ '/Users/keithmancuso/.npm/generator-familiar-craft/0.0.0/package.tgz',
-10 verbose tar pack   './' ]
+10 verbose tar pack   '.' ]
 11 verbose tarball /Users/keithmancuso/.npm/generator-familiar-craft/0.0.0/package.tgz
-12 verbose folder ./
+12 verbose folder .
 13 info prepublish generator-familiar-craft@0.0.0
-14 silly lockFile 04cb2bca-tar tar://./
-15 verbose lock tar://./ /Users/keithmancuso/.npm/04cb2bca-tar.lock
+14 silly lockFile 1f1177db-tar tar://.
+15 verbose lock tar://. /Users/keithmancuso/.npm/1f1177db-tar.lock
 16 silly lockFile efbc63c1-familiar-craft-0-0-0-package-tgz tar:///Users/keithmancuso/.npm/generator-familiar-craft/0.0.0/package.tgz
 17 verbose lock tar:///Users/keithmancuso/.npm/generator-familiar-craft/0.0.0/package.tgz /Users/keithmancuso/.npm/efbc63c1-familiar-craft-0-0-0-package-tgz.lock
-18 silly lockFile 04cb2bca-tar tar://./
-19 silly lockFile 04cb2bca-tar tar://./
+18 silly lockFile 1f1177db-tar tar://.
+19 silly lockFile 1f1177db-tar tar://.
 20 silly lockFile efbc63c1-familiar-craft-0-0-0-package-tgz tar:///Users/keithmancuso/.npm/generator-familiar-craft/0.0.0/package.tgz
 21 silly lockFile efbc63c1-familiar-craft-0-0-0-package-tgz tar:///Users/keithmancuso/.npm/generator-familiar-craft/0.0.0/package.tgz
 22 silly lockFile 1cfb0431-tor-familiar-craft-0-0-0-package /Users/keithmancuso/.npm/generator-familiar-craft/0.0.0/package
 23 verbose lock /Users/keithmancuso/.npm/generator-familiar-craft/0.0.0/package /Users/keithmancuso/.npm/1cfb0431-tor-familiar-craft-0-0-0-package.lock
 24 silly lockFile 1cfb0431-tor-familiar-craft-0-0-0-package /Users/keithmancuso/.npm/generator-familiar-craft/0.0.0/package
 25 silly lockFile 1cfb0431-tor-familiar-craft-0-0-0-package /Users/keithmancuso/.npm/generator-familiar-craft/0.0.0/package
-26 silly lockFile 0ee6c175- ./
-27 silly lockFile 0ee6c175- ./
+26 silly lockFile 3a52ce78- .
+27 silly lockFile 3a52ce78- .
 28 silly publish { name: 'generator-familiar-craft',
 28 silly publish   version: '0.0.0',
 28 silly publish   description: 'Yeoman generator',
@@ -62,17 +62,55 @@
 28 silly publish   peerDependencies: { yo: '>=1.0.0' },
 28 silly publish   readme: '# generator-familiar-craft [![Build Status](https://secure.travis-ci.org/familiar-studio/generator-familiar-craft.png?branch=master)](https://travis-ci.org/familiar-studio/generator-familiar-craft)\n\n> [Yeoman](http://yeoman.io) generator\n\n\n## Getting Started\n\n### What is Yeoman?\n\nTrick question. It\'s not a thing. It\'s this guy:\n\n![](http://i.imgur.com/JHaAlBJ.png)\n\nBasically, he wears a top hat, lives in your computer, and waits for you to tell him what kind of application you wish to create.\n\nNot every new computer comes with a Yeoman pre-installed. He lives in the [npm](https://npmjs.org) package repository. You only have to ask for him once, then he packs up and moves into your hard drive. *Make sure you clean up, he likes new and shiny things.*\n\n```bash\nnpm install -g yo\n```\n\n### Yeoman Generators\n\nYeoman travels light. He didn\'t pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.\n\nTo install generator-familiar-craft from npm, run:\n\n```bash\nnpm install -g generator-familiar-craft\n```\n\nFinally, initiate the generator:\n\n```bash\nyo familiar-craft\n```\n\n### Getting To Know Yeoman\n\nYeoman has a heart of gold. He\'s a person with feelings and opinions, but he\'s very easy to work with. If you think he\'s too opinionated, he can be easily convinced.\n\nIf you\'d like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).\n\n\n## License\n\nMIT\n',
 28 silly publish   readmeFilename: 'README.md',
+28 silly publish   gitHead: '352661b62005c2e2a99449855862643f132fbfdd',
 28 silly publish   bugs: { url: 'https://github.com/familiar-studio/generator-familiar-craft/issues' },
 28 silly publish   homepage: 'https://github.com/familiar-studio/generator-familiar-craft',
 28 silly publish   _id: 'generator-familiar-craft@0.0.0',
-28 silly publish   _shasum: '3112123900e2bd6582f3c6ceb188a46ba5940154',
-28 silly publish   _from: './' }
-29 error need auth auth and email required for publishing
-29 error need auth You need to authorize this machine using `npm adduser`
-30 error System Darwin 14.0.0
-31 error command "/usr/local/bin/node" "/usr/local/bin/npm" "publish" "./"
-32 error cwd /Users/keithmancuso/generators/generator-familiar-craft
-33 error node -v v0.10.32
-34 error npm -v 1.4.28
-35 error code ENEEDAUTH
-36 verbose exit [ 1, true ]
+28 silly publish   _shasum: '0de5016320d10a10f50c2092cbeceb6bb9f92eec',
+28 silly publish   _from: '.' }
+29 verbose request where is /generator-familiar-craft
+30 verbose request registry https://registry.npmjs.org/
+31 verbose request id 963511c75159d900
+32 verbose url raw /generator-familiar-craft
+33 verbose url resolving [ 'https://registry.npmjs.org/', './generator-familiar-craft' ]
+34 verbose url resolved https://registry.npmjs.org/generator-familiar-craft
+35 verbose request where is https://registry.npmjs.org/generator-familiar-craft
+36 info trying registry request attempt 1 at 20:36:31
+37 http PUT https://registry.npmjs.org/generator-familiar-craft
+38 http 403 https://registry.npmjs.org/generator-familiar-craft
+39 verbose headers { date: 'Fri, 17 Oct 2014 00:36:31 GMT',
+39 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+39 verbose headers   'content-type': 'application/json',
+39 verbose headers   'cache-control': 'max-age=60',
+39 verbose headers   'content-length': '4805',
+39 verbose headers   'accept-ranges': 'bytes',
+39 verbose headers   via: '1.1 varnish',
+39 verbose headers   'x-served-by': 'cache-atl6225-ATL',
+39 verbose headers   'x-cache': 'MISS',
+39 verbose headers   'x-cache-hits': '0',
+39 verbose headers   'x-timer': 'S1413506191.524243,VS0,VE139',
+39 verbose headers   'keep-alive': 'timeout=10, max=50',
+39 verbose headers   connection: 'Keep-Alive' }
+40 error publish Failed PUT 403
+41 error Error: forbidden cannot modify pre-existing version: 0.0.0
+41 error old={"name":"generator-familiar-craft","version":"0.0.0","description":"Yeoman generator","license":"MIT","main":"app/index.js","repository":{"type":"git","url":"https://github.com/familiar-studio/generator-familiar-craft"},"author":{"name":"Familiar Studio","email":"inquiries@familiar-studio.com","url":"https://github.com/familiar-studio"},"engines":{"node":">=0.10.0"},"scripts":{"test":"mocha"},"files":["app"],"keywords":["yeoman-generator"],"dependencies":{"yeoman-generator":"^0.17.0","chalk":"^0.5.0","yosay":"^0.3.0"},"devDependencies":{"mocha":"*"},"peerDependencies":{"yo":">=1.0.0"},"bugs":{"url":"https://github.com/familiar-studio/generator-familiar-craft/issues"},"homepage":"https://github.com/familiar-studio/generator-familiar-craft","_id":"generator-familiar-craft@0.0.0","_shasum":"3112123900e2bd6582f3c6ceb188a46ba5940154","_from":"./","_npmVersion":"1.4.28","_npmUser":{"name":"keithmancuso","email":"keith@familiar-studio.com"},"maintainers":[{"name":"keithmancuso","email":"keith@familiar-studio.com"}],"dist":{"shasum":"3112123900e2bd6582f3c6ceb188a46ba5940154","tarball":"http://registry.npmjs.org/generator-familiar-craft/-/generator-familiar-craft-0.0.0.tgz"}}
+41 error new={"name":"generator-familiar-craft","version":"0.0.0","description":"Yeoman generator","license":"MIT","main":"app/index.js","repository":{"type":"git","url":"https://github.com/familiar-studio/generator-familiar-craft"},"author":{"name":"Familiar Studio","email":"inquiries@familiar-studio.com","url":"https://github.com/familiar-studio"},"engines":{"node":">=0.10.0"},"scripts":{"test":"mocha"},"files":["app"],"keywords":["yeoman-generator"],"dependencies":{"yeoman-generator":"^0.17.0","chalk":"^0.5.0","yosay":"^0.3.0"},"devDependencies":{"mocha":"*"},"peerDependencies":{"yo":">=1.0.0"},"readme":"# generator-familiar-craft [![Build Status](https://secure.travis-ci.org/familiar-studio/generator-familiar-craft.png?branch=master)](https://travis-ci.org/familiar-studio/generator-familiar-craft)\u000a\u000a> [Yeoman](http://yeoman.io) generator\u000a\u000a\u000a## Getting Started\u000a\u000a### What is Yeoman?\u000a\u000aTrick question. It's not a thing. It's this guy:\u000a\u000a![](http://i.imgur.com/JHaAlBJ.png)\u000a\u000aBasically, he wears a top hat, lives in your computer, and waits for you to tell him what kind of application you wish to create.\u000a\u000aNot every new computer comes with a Yeoman pre-installed. He lives in the [npm](https://npmjs.org) package repository. You only have to ask for him once, then he packs up and moves into your hard drive. *Make sure you clean up, he likes new and shiny things.*\u000a\u000a```bash\u000anpm install -g yo\u000a```\u000a\u000a### Yeoman Generators\u000a\u000aYeoman travels light. He didn't pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.\u000a\u000aTo install generator-familiar-craft from npm, run:\u000a\u000a```bash\u000anpm install -g generator-familiar-craft\u000a```\u000a\u000aFinally, initiate the generator:\u000a\u000a```bash\u000ayo familiar-craft\u000a```\u000a\u000a### Getting To Know Yeoman\u000a\u000aYeoman has a heart of gold. He's a person with feelings and opinions, but he's very easy to work with. If you think he's too opinionated, he can be easily convinced.\u000a\u000aIf you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).\u000a\u000a\u000a## License\u000a\u000aMIT\u000a","readmeFilename":"README.md","gitHead":"352661b62005c2e2a99449855862643f132fbfdd","bugs":{"url":"https://github.com/familiar-studio/generator-familiar-craft/issues"},"homepage":"https://github.com/familiar-studio/generator-familiar-craft","_id":"generator-familiar-craft@0.0.0","_shasum":"0de5016320d10a10f50c2092cbeceb6bb9f92eec","_from":".","_npmVersion":"1.4.28","_npmUser":{"name":"keithmancuso","email":"keith@familiar-studio.com"},"maintainers":[{"name":"keithmancuso","email":"keith@familiar-studio.com"}],"dist":{"shasum":"0de5016320d10a10f50c2092cbeceb6bb9f92eec","tarball":"http://registry.npmjs.org/generator-familiar-craft/-/generator-familiar-craft-0.0.0.tgz"}}: generator-familiar-craft
+41 error     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:308:14)
+41 error     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:246:65)
+41 error     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:236:22)
+41 error     at Request.emit (events.js:98:17)
+41 error     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1142:14)
+41 error     at Request.emit (events.js:117:20)
+41 error     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1096:12)
+41 error     at IncomingMessage.emit (events.js:117:20)
+41 error     at _stream_readable.js:943:16
+41 error     at process._tickCallback (node.js:419:13)
+42 error If you need help, you may report this *entire* log,
+42 error including the npm and node versions, at:
+42 error     <http://github.com/npm/npm/issues>
+43 error System Darwin 14.0.0
+44 error command "node" "/usr/local/bin/npm" "publish"
+45 error cwd /Users/keithmancuso/generators/generator-familiar-craft
+46 error node -v v0.10.32
+47 error npm -v 1.4.28
+48 verbose exit [ 1, true ]
