@@ -1,47 +1,46 @@
-# generator-familiar-craft [![Build Status](https://secure.travis-ci.org/familiar-studio/generator-familiar-craft.png?branch=master)](https://travis-ci.org/familiar-studio/generator-familiar-craft)
+# generator-familiar-craft
 
-> [Yeoman](http://yeoman.io) generator
+Yeoman generator to download and setup [Craft CMS](http://buildwithcraft.com/) on a local machine.  Its optimized for a MAMP based workflow but could work with other systems.  The only thing you need to do before running it is setup a host via mamp that points to an empty 'project-name/public' directory
 
+When run it will ask you for the project name, local host name, and local database name then it will run through the steps outlined below
 
-## Getting Started
+## What the generator does
 
-### What is Yeoman?
+### Yeoman's Steps
 
-Trick question. It's not a thing. It's this guy:
+* Copy over some default config and template files, and makes empty plugins and storage folders
+* Copy over a starter Gruntfile.js with package.json (more on this later)
+* Copy really basic bower.json (just includes bootstrap for now)
+* Runs npm install
+* Runs bower install
+* Then it launches a Grunt Command called 'craft-install'
 
-![](http://i.imgur.com/JHaAlBJ.png)
+### Grunt's Steps
+* Download craft via curl
+* Unzips it
+* copies over just the app folder into the /craft folder
+* Delete the zip file and temporary unziped folder
+* makes a database named whatever you called it during the initial setup (assumes username:root password:root)
+* compiles the bootstrap less file
+* opens the admin install screen
 
-Basically, he wears a top hat, lives in your computer, and waits for you to tell him what kind of application you wish to create.
+### Craft's Steps
+* craft handles the rest via the normal install workflow
 
-Not every new computer comes with a Yeoman pre-installed. He lives in the [npm](https://npmjs.org) package repository. You only have to ask for him once, then he packs up and moves into your hard drive. *Make sure you clean up, he likes new and shiny things.*
+## Setup Instructions
 
-```bash
-npm install -g yo
+1 - Install this generator via npm (only have to do this once and it assumes have yo installed)
+
 ```
-
-### Yeoman Generators
-
-Yeoman travels light. He didn't pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.
-
-To install generator-familiar-craft from npm, run:
-
-```bash
 npm install -g generator-familiar-craft
 ```
 
-Finally, initiate the generator:
+2 - Create a local host via MAMP that points to an empty 'project-name/public' folder
 
-```bash
+3 - Finally, initiate the generator:
+
+```
 yo familiar-craft
 ```
 
-### Getting To Know Yeoman
-
-Yeoman has a heart of gold. He's a person with feelings and opinions, but he's very easy to work with. If you think he's too opinionated, he can be easily convinced.
-
-If you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).
-
-
-## License
-
-MIT
+*TADA!*

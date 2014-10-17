@@ -12,6 +12,8 @@
     "grunt-deployments": "^0.2.0",
     "grunt-notify": "^0.3.0",
     "grunt-open": "^0.2.3",
-    "grunt-zip": "^0.16.0"
+    "grunt-zip": "^0.16.0",
+    "grunt-shell": "^1.1.1"
+
   }
 }
