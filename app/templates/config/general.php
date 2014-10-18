@@ -21,18 +21,14 @@ return array(
     'devMode' => true,
     'generateTransformsAfterPageLoad' => false,
     'backupDbOnUpdate' => false,
-    'environmentVariables' => array(
-      'siteUrl' => 'http://<%= siteUrl %>/'
-    )
+    'siteUrl' => 'http://<%= siteUrl %>/'
+
   ),
 
   '.org' => array(
   	'usePathInfo' => true,
   	'generateTransformsAfterPageLoad' => false,
-  	'devMode' => false,
-  	'environmentVariables' => array(
-      'siteUrl' => 'http://www.google.com'
-    )
+  	'devMode' => false
   )
 
 
