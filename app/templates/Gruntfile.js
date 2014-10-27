@@ -106,6 +106,15 @@
 
       }
     },
+
+    styleinjector: {
+          files: {
+              src : 'public/styles/*.css',
+          },
+          options: {
+              watchTask: true,
+          },
+      },
     shell: {
         makeDb: {
             command: 'mysql -u root -proot -e "create database <%= databaseName %>"'
@@ -122,6 +131,7 @@
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-deployments');
   grunt.loadNpmTasks('grunt-open');
+  grunt.loadNpmTasks('grunt-style-injector');
 
   grunt.loadNpmTasks('grunt-notify');
   grunt.loadNpmTasks('grunt-contrib-clean');
