@@ -43,4 +43,37 @@ npm install -g generator-familiar-craft
 yo familiar-craft
 ```
 
+## Reusable Grunt Functions Instructions
+
+```
+grunt db_pull
+```
+
+will download and backup a copy of the database from the live or staging server and import it into your local
+
+```
+grunt db_push
+```
+
+pushes a local database up to live
+
+```
+grunt craft
+```
+
+downloads a copy of the latest craft from buildwithcraft.com and replaces just the /craft/app folder.  Great if your local files get behind the live.
+
+```
+grunt install
+```
+
+grabs craft app folder, creates the local database, and opens chrome to the craft install screem
+
+```
+grunt setup
+```
+
+similar to install but it assumes your working from an existing repo with a live server.  grabs craft app folder, creates the local database, and does a db_pull 
+
+
 *TADA!*
