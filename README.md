@@ -43,7 +43,7 @@ npm install -g generator-familiar-craft
 yo familiar-craft
 ```
 
-## Reusable Grunt Functions Instructions
+## Reusable Grunt Functions
 
 ```
 grunt db_pull
@@ -73,7 +73,7 @@ grabs craft app folder, creates the local database, and opens chrome to the craf
 grunt setup
 ```
 
-similar to install but it assumes your working from an existing repo with a live server.  grabs craft app folder, creates the local database, and does a db_pull 
+similar to install but it assumes your working from an existing repo with a live server.  grabs craft app folder, creates the local database, and does a db_pull
 
 
 *TADA!*
