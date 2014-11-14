@@ -20,18 +20,6 @@
       }
     },
 
-    copy: {
-
-      // setup entire craft folder and public for new installs
-      craft: {
-
-        files: [
-          // includes files within path and its sub-directories
-          {expand: true, cwd: '.tmp/craft/app/', src: ['**'], dest: 'craft/app'}
-        ]
-
-      }
-    },
 
     clean: {
       craft:[".tmp", "craft.zip"]
@@ -56,9 +44,9 @@
         "title": "Stage",
         "database": "<%= databaseName %>",
         "user": "forge",
-        "pass": "",
-        "host": "",
-        "ssh_host": ""
+        "pass": "<%= liveDbPassword %>",
+        "host": "<%= liveHost %>",
+        "ssh_host": "forge@<%= liveHost %>"
 
       }
     },
@@ -116,9 +104,26 @@
           },
       },
     shell: {
-        makeDb: {
-            command: 'mysql -u root -proot -e "create database <%= databaseName %>"'
-        }
+
+      moveCraft: {
+
+	        command: [
+	                'rm -rf craft/app',
+	                'mv .tmp/craft/app craft/app'
+	            ].join('&&')
+      	},
+      makeDb: {
+        options: {
+	        failOnError: false
+        },
+          command: 'mysql -u root -proot -e "create database <%= databaseName %>"'
+      },
+      makeStorage: {
+        options: {
+	        failOnError: false
+        },
+          command: 'mkdir craft/storage'
+      }
     }
 
   });
@@ -131,13 +136,12 @@
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-deployments');
   grunt.loadNpmTasks('grunt-open');
-  grunt.loadNpmTasks('grunt-style-injector');
 
   grunt.loadNpmTasks('grunt-notify');
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.task.registerTask('craft', ['curl:craft', 'unzip:craft', 'copy:craft', 'clean:craft']);
-  grunt.task.registerTask('craft-install', ['craft','shell:makeDb','less:development', 'open:install']);
-
+  grunt.task.registerTask('craft', ['curl:craft', 'unzip:craft', 'shell:moveCraft', 'clean:craft']);
+  grunt.task.registerTask('install', ['craft','shell:makeDb','less:development', 'open:install']);
+  grunt.task.registerTask('setup', ['craft','shell:makeDb','less:development', 'db_pull', 'shell:makeStorage']);
   grunt.task.registerTask('db-pull', ['db_pull']);
 
 

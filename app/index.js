@@ -36,12 +36,31 @@ module.exports = yeoman.generators.Base.extend({
       message: 'Whats the database name?',
       default: this.appname+'_craft'
     }
+    ,{
+
+      name: 'liveHost',
+      message: 'Whats the live hostname?'
+    }
+    ,{
+
+      name: 'liveUser',
+      message: 'Whats the live username?',
+      default: 'forge'
+    }
+    ,{
+
+      name: 'liveDbPassword',
+      message: 'Whats the live database password?'
+    }
     ];
 
     this.prompt(prompts, function (props) {
       this.databaseName = props.databaseName;
       this.siteUrl = props.siteUrl;
       this.name = props.name;
+      this.liveHost = props.liveHost;
+      this.liveUser = props.liveUser;
+      this.liveDbPassword = props.liveDbPassword;
 
       done();
     }.bind(this));
@@ -98,7 +117,7 @@ module.exports = yeoman.generators.Base.extend({
     this.installDependencies({
       skipInstall: this.options['skip-install'],
       callback: function () {
-        this.spawnCommand('grunt', ['craft-install']);
+        this.spawnCommand('grunt', ['install']);
       }.bind(this)
     });
   }
