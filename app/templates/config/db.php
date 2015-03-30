@@ -17,7 +17,7 @@ return array(
   '.dev' => array(
     'server' => 'localhost',
     'user' => 'root',
-    'password' => 'root'
+    'password' => '11141987'
   ),
 
   '.org' => array(
